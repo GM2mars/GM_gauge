@@ -28,8 +28,8 @@ function Gauge(id, p) {
 		'radius': p.radius || minSide/2*0.7,			//70% от 1/2 минимальной стороны
 		'apert': p.apert || 225,						//апертура в градусах
 		'insideText': p.insideText || false,			//текст внутри окружности (внутри / снаружи)
-		'lineWidth': p.lineWidth || 2,					//ширина линии
-		'color': p.color || '#51545B',					//цвет линии
+		'lineWidth': p.lineWidth || 2,				//ширина линии
+		'color': p.color || '#51545B'					//цвет линии
 	}
 
 	insAngle=360-p.apert;					//исходя из заданной апертуры вычисляем обратный угол 

@@ -27,7 +27,7 @@
 				'fontSize': fontSize,
 				'textColor': textColor
 			};
-			
+
 			this.addClass('gauge');
 
 			minSide=(style.width < style.height) ? style.width : style.height;
@@ -38,7 +38,7 @@
 				'apert': 225,						//апертура в градусах
 				'insideText': false,					//текст внутри окружности (внутри / снаружи)
 				'lineWidth': 2,						//ширина линии
-				'color': '#51545B',					//цвет линии
+				'color': '#51545B'					//цвет линии
 			}, p, par);
 
 			insAngle=360-p.apert;					//исходя из заданной апертуры вычисляем обратный угол 
