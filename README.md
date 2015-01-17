@@ -7,6 +7,7 @@
   - Удобное конфигурирование через css файл стилей
   - Рисуется canvas элементом
 
+![круговая шкала](https://yadi.sk/i/P0_9tSBpe4GVe)
 ### Установка
 ```
 $ component install GM2mars/GM_gauge
