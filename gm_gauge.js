@@ -45,7 +45,6 @@ function Gauge(id, p) {
 		'deg': 270
 	};
 
-	
 	for (var key in p) this.dataGauge[key]=p[key];		//дополняем наш объект "необязательными" значениями
 
 	this.data=[];		//объект с данными о значениях
