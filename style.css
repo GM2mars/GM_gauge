@@ -1,0 +1,77 @@
+
+/*---------------- CUSTOM STYLE ---------------------- */
+#fibonachi {
+	float: left;
+	width: 500px;
+	height: 500px;
+	color: #F27554;
+	font-size: 12px;
+	font-family: "Tahoma";
+	border: 1px solid #E3E3E3;
+	margin: 0;
+}
+
+#gauge1 {
+	float: left;
+	width: 650px;
+	height: 500px;
+	color: #525F6F;
+	font-size: 12px;
+	font-family: "Verdana";
+	border: 1px solid #E3E3E3;
+	margin: 0;
+}
+
+#gauge {
+	float: left;
+	width: 450;
+	height: 450;
+	color: #40434A;
+	font-size: 14px;
+	font-family: "Tahoma";
+	border: 1px solid #E3E3E3;
+	margin: 0;
+}
+
+/*---------------- GAUGE NOT EDIT STYLE ---------------------- */
+
+	.gauge {
+		padding: 0;
+		position: relative;
+		display: none;
+	}
+
+	.gaugeCanvas {
+		display: block !important;
+		overflow: hidden;
+	}
+
+	 .gaugeArrow {
+		position: absolute;
+		background: transparent;
+		top: 0;
+		left: 0;
+		border-radius: 50%;
+		overflow: hidden;
+		transition: transform 1s;
+			-webkit-transition: transform 1s;
+			-moz-transition: transform 1s;
+			-o-transition: transform 1s;
+			-ms-transition: transform 1s;
+	}
+
+	.gaugeTumbler {
+		position: relative;
+		margin: -50px 20px 0;
+		z-index: 10;
+		color: #24282F;
+		font-family: 'Tahoma';
+	}
+		.gaugeTumbler h3 {
+			font-size: 18px;
+			float: left;
+			margin: 0; 
+		}
+		.gaugeTumbler select {
+			margin: 0 20px; 
+		}

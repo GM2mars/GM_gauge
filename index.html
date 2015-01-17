@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Круговая шкала им. Гауга</title>
+		<link rel="stylesheet" href="style.css">	
+		<script src="canvas.js"></script>
+	</head>
+	<body>
+		<!--
+			*** наша разметка для круговой шкалы ***
+			в принципе нет разницы, список это или просто дивы
+			каждый дочерний элемент это отдельное значение на шкале
+			атрибутом 'data-color' устанавливаем цвет для участка данного значения
+			свойством 'selected' отмечаем текущий выбранный элемент 
+		-->
+		<ul id="gauge">
+			<li data-color='#6DD346'>ноль</li>
+			<li>1</li>
+			<li>два</li>
+			<li>3</li>
+			<li data-color='#65C2DE' selected >четыре</li>
+			<li data-color='#59506A'>5</li>
+			<li data-color='#E56C6C'>шесть</li>
+		</ul>
+
+		<div id="gauge1">
+			<div data-color='#CCFFFF' selected>#CCFFFF</div>
+			<div data-color='#99FFFF'>#99FFFF</div>
+			<div data-color='#66FFFF'>#66FFFF</div>
+			<div data-color='#33FFFF'>#33FFFF</div>
+			<div data-color='#00FFFF'>#00FFFF</div>
+			<div data-color='#99CCCC'>#99CCCC</div>
+			<div data-color='#66CCCC'>#66CCCC</div>
+			<div data-color='#33CCCC'>#33CCCC</div>
+			<div data-color='#00CCCC'>#00CCCC</div>
+			<div data-color='#669999'>#669999</div>
+			<div data-color='#339999'>#339999</div>
+			<div data-color='#009999'>#009999</div>
+			<div data-color='#336666'>#336666</div>
+			<div data-color='#006666'>#006666</div>
+			<div data-color='#003333'>#003333</div>
+		</div>
+
+		<div id="fibonachi">
+			<div>0</div>
+			<div>1</div>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div selected>5</div>
+			<div>8</div>
+			<div>13</div>
+			<div>21</div>
+			<div>34</div>
+			<div>55</div>
+			<div>89</div>
+			<div>144</div>
+			<div>233</div>
+			<div>377</div>
+		</div>
+
+		<script>
+			var gauge=new Gauge('gauge');
+			gauge.runDrawGauge();
+
+			var gauge1=new Gauge('gauge1', {'apert': 320, 'lineWidth': 6});
+			gauge1.runDrawGauge();
+
+			var fibonachi=new Gauge('fibonachi', {'apert': 180, 'insideText': true, 'color': '#00C6FF', 'lineWidth': 6});
+			fibonachi.runDrawGauge();
+		</script>
+
+	</body>
+	</html>	
