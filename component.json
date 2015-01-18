@@ -2,16 +2,15 @@
   "name": "gm_gauge",
   "repo": "GM2mars/GM_gauge",
   "description": "Круговая шкала со стрелкой (canvas)",
-  "version": "0.0.3",
-  "keywords": [],
+  "version": "1.0.0",
+  "keywords": ["gauge", "scale", "chart"],
   "dependencies": {
   },
-  "development": {},
-  "license": "MIT",
   "scripts": [
     "gm_gauge_min.js"
   ],
   "styles": [
     "style.css"
-  ]
+  ],
+  "license": "MIT"
 }

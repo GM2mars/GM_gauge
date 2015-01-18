@@ -1,0 +1,13 @@
+{
+  "name": "gm_gauge",
+    "description": "Круговая шкала со стрелкой (canvas)",
+  "keywords":  ["gauge", "scale", "chart"],
+  "version": "1.0.0",
+  "main": "gm_gauge_min.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/GM2mars/GM_gauge"
+  },
+  "author": "GM2mars (http://GML.link/)",
+  "license": "MIT"
+}
