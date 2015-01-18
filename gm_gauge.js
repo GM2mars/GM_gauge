@@ -59,7 +59,7 @@ function Gauge(id, p) {
 		for (var i=0; i<el.childNodes.length; i++) {
 			child=el.childNodes[i];
 			if (child.nodeType==1) {
-				color=child.dataset.color || false;
+				color=child.getAttribute('data-color') || false;
 				if (child.getAttribute('selected')!==null) self.dataGauge.selected=index;
 				self.data.push({'text': child.innerHTML, 'color': color});
 				index++;

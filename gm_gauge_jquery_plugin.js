@@ -60,7 +60,7 @@
 
 			//анонимная функция, созданная для анонимности
 			!function() {
-				var	child=null,
+				var	item=null,
 					index=0,
 					color=null;
 
@@ -68,7 +68,7 @@
 				self.children('*').each(function(index) {
 					item=jQuery(this);
 					color=item.data('color') || false;
-					if (item.attr('selected')!==null) dataGauge.selected=index;
+					if (this.getAttribute('selected')!==null) dataGauge.selected=index;
 					data.push({'text': item.text(), 'color': color});
 				});
 			}();
