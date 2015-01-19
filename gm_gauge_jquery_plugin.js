@@ -30,7 +30,7 @@
 
 			this.addClass('gauge');
 
-			minSide=(style.width < style.height) ? style.width : style.height;
+			minSide=Math.min(style.width,style.height);
 
 			p=$.extend({
 				'allStart': true,
