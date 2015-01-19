@@ -21,8 +21,7 @@ function Gauge(id, p) {
 
 	el.className='gauge';
 
-	minSide=(this.style.width < this.style.height) ? this.style.width : this.style.height;		//вычисляем минимальную сторону для дефолтного радиуса
-
+	minSide=Math.min(this.style.width, this.style.height);		//вычисляем минимальную сторону для дефолтного радиуса
 	//необязательные параметры, которые имеют значения по умолчанию
 	p={
 		'radius': p.radius || minSide/2*0.7,			//70% от 1/2 минимальной стороны
