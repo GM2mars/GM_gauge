@@ -1,11 +1,9 @@
 # GM_gauge
 
-Круговая шкала со стрелкой.
+Построение круговой шкалы из HTML списка (блоков). Отрисовка через элемент canvas, анимация поворота стрелки через css3 анимацию. Две версии скрипта: как отдельный javascript класс (без зависимостей) и как jquery плагин. 
 
-  - Версия как отдельный класс работает без использования jQuery, на чистом js
-  - Версия с jQuery реализована в виде plugin'a
-  - Шкала строится на основе HTML блоков
-  - Удобное конфигурирование через css файл стилей
+  - Декларативный подход (html список как основа графика)
+  - Высокая скорость отрисовки и выполнения (Firefox 35 | 3.5ms)
   - Рисуется canvas элементом
   - Поддержка интернет браузерами и IE9+
 
@@ -14,6 +12,44 @@
 ```
 $ component install GM2mars/GM_gauge
 ```
+###Пример
+```
+//CSS
+//задаем размер и стиль шрифта для значений
+#gauge {
+	width: 450px;
+	height: 450px;
+	color: #40434A;
+	font-size: 14px;
+	font-family: "Tahoma";
+}
+//HTML
+//родительский элемент как контейнер, а дочерние как единицы значения на шкале.
+//data-color атрибут указывает цвет отрезка
+//свойство selected указывает текущий выбранный элемент
+<ul id="gauge">
+	<li data-color='#6DD346'>ноль</li>
+	<li>1</li>
+	<li>два</li>
+	<li>3</li>
+	<li data-color='#65C2DE' selected >четыре</li>
+	<li data-color='#59506A'>5</li>
+	<li data-color='#E56C6C'>шесть</li>
+</ul>
+
+<script>
+//js
+//в круглых скобках необязательные параметры
+var gauge=new Gauge('gauge', {'apert': 320, 'lineWidth': 6});
+gauge.runDrawGauge();
+
+//jQuery
+jQuery(document).ready(function() {
+	var el=jQuery('#gauge');
+	el.gauge();
+});
+</script>
+
 ### Параметры JS
 
 (в скобках параметры по умолчанию)
@@ -32,38 +68,3 @@ $ component install GM2mars/GM_gauge
 - color - цвет текста значений
 - font-size - размер шрифта
 - font-family - семейство шрифта
-
-###Пример
-HTML блоки как основа. Родительский блок - главный блок, который конфигурируется в css файле, а id указывается при создании круговой шкалы.
-Дочерние блоки - список значений, data-color атрибут - это цвет сектора значения, а свойство "selected" указывает на активное значение шкалы.
-```
-//CSS
-#gauge {
-	width: 450px;
-	height: 450px;
-	color: #40434A;
-	font-size: 14px;
-	font-family: "Tahoma";
-}
-//HTML
-<ul id="gauge">
-	<li data-color='#6DD346'>ноль</li>
-	<li>1</li>
-	<li>два</li>
-	<li>3</li>
-	<li data-color='#65C2DE' selected >четыре</li>
-	<li data-color='#59506A'>5</li>
-	<li data-color='#E56C6C'>шесть</li>
-</ul>
-
-<script>
-//js
-var gauge=new Gauge('gauge', {'apert': 320, 'lineWidth': 6});
-gauge.runDrawGauge();
-
-//jQuery
-jQuery(document).ready(function() {
-	var el=jQuery('#gauge');
-	el.gauge();
-});
-</script>
